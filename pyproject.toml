@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "commypanel"
+dynamic = ["version"]
+description = "A small, dependency-free client for the CommyPanel HTTP API."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "CommyPanel contributors" }]
+keywords = ["commypanel", "deploy", "api-client", "self-hosted"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Typing :: Typed",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/CommyPanel/commypanel-python"
+Source = "https://github.com/CommyPanel/commypanel-python"
+Issues = "https://github.com/CommyPanel/commypanel-python/issues"
+Panel = "https://github.com/CommyPanel/panel"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+commypanel = ["py.typed"]
+
+[tool.setuptools.dynamic]
+version = { attr = "commypanel.__version__" }

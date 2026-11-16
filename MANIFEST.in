@@ -1,0 +1,8 @@
+include LICENSE README.md SECURITY.md
+recursive-include src *.py py.typed
+recursive-include tests *.py
+include testdata/openapi.yaml
+include scripts/sync-spec.sh
+# The throwaway test-only certificates and keys are not shipped; the TLS tests skip without them.
+prune tests/fixtures
+global-exclude *.key *.pem
