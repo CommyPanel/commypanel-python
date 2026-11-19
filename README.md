@@ -14,8 +14,6 @@ environment variables.
 pip install commypanel
 ```
 
-(Until the first release is on PyPI, install from a checkout: `pip install .`.)
-
 ## Use
 
 Create a token in the panel under **Settings > API tokens**. Give it only what it needs (for a deploy job:
@@ -94,7 +92,7 @@ python3 -m unittest discover -s tests -v               # no test dependencies
 
 ## Publishing
 
-Not yet published to PyPI. When it is, it will be from CI with PyPI trusted publishing (no long-lived
-token) and signed attestations, set up as a deliberate step of its own.
+Releases are on PyPI. They are uploaded by hand from a clean checkout after the tests pass; moving this to
+CI with PyPI trusted publishing is a possible later step.
 
 MIT licensed.
